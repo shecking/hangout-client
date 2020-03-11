@@ -14,6 +14,8 @@
     <body>
       <h1>HangOut</h1>
 
+      <div id='user-messages'></div>
+
       <form id='sign-up'>
         <input name='credentials[email]' type='email' placeholder='example@example'>
         <input name='credentials[password]' type='password' placeholder='password'>
@@ -28,8 +30,8 @@
       </form>
 
       <form id='change-password'>
-        <input name='password[old]' type='password' placeholder='password'>
-        <input name='password[new]' type='password' placeholder='password'>
+        <input name='passwords[old]' type='password' placeholder='password'>
+        <input name='passwords[new]' type='password' placeholder='password'>
         <input type='submit' value='Change password!'>
       </form>
 

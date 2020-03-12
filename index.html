@@ -44,28 +44,33 @@
 
 
   <form id='create-event'>
-    <input name='event[title]' type='text' placeholder='example@example'>
+    <input name='event[title]' type='text' placeholder='The best event ever'>
     <!-- <input name='date' type='text' placeholder='password'> -->
-    <input name='event[time]' type='text' placeholder='password'>
-    <input name='event[location]' type='text' placeholder='password'>
-    <input name='event[description]' type='text' placeholder='password'>
+    <input name='event[time]' type='text' placeholder='16:44'>
+    <input name='event[location]' type='text' placeholder='My house'>
+    <input name='event[description]' type='text' placeholder='Fun time'>
     <input type='submit' value='Create Event!'>
   </form>
 
   <form id='update-event'>
-    <input name='credentials[email]' type='email' placeholder='example@example'>
-    <input name='credentials[password]' type='password' placeholder='password'>
+    <input name='event[title]' type='text' placeholder='The best event ever'>
+    <!-- <input name='date' type='text' placeholder='password'> -->
+    <input name='event[time]' type='text' placeholder='16:04'>
+    <input name='event[location]' type='text' placeholder='My house'>
+    <input name='event[description]' type='text' placeholder='Fun time'>
     <input type='submit' value='Update Event!'>
   </form>
 
   <form id='delete-event'>
-    <input name='passwords[old]' type='password' placeholder='password'>
-    <input name='passwords[new]' type='password' placeholder='password'>
-    <input type='submit' value='Delete Event!'>
+    <input name='event[id]' type='text' placeholder='id'>
   </form>
 
   <form id='index-event'>
       <input type='submit' value='Index event!'>
+  </form>
+
+  <form id='index-all-events'>
+      <input type='submit' value='Index all events!'>
   </form>
     </body>
 </html>

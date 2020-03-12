@@ -36,7 +36,7 @@ const eventDelete = function (data) {
   })
 }
 
-const eventIndex = function (data) {
+const eventIndex = function () {
   return $.ajax({
     method: 'GET',
     url: config.apiUrl + '/events',
@@ -46,9 +46,17 @@ const eventIndex = function (data) {
   })
 }
 
+const allEventIndex = function () {
+  return $.ajax({
+    method: 'GET',
+    url: config.apiUrl + '/events/openall'
+  })
+}
+
 module.exports = {
   eventCreate,
   eventUpdate,
   eventDelete,
-  eventIndex
+  eventIndex,
+  allEventIndex
 }

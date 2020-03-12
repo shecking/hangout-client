@@ -39,17 +39,29 @@ const onEventDelete = function (event) {
 const onEventIndex = function (event) {
   event.preventDefault()
 
-  const form = event.target
-  const data = getFormFields(form)
+  // const form = event.target
+  // const data = getFormFields(form)
 
-  api.eventIndex(data)
+  api.eventIndex()
     .then(ui.onEventIndexSuccess)
     .catch(ui.onEventIndexFailure)
+}
+
+const onAllEventIndex = function (event) {
+  event.preventDefault()
+
+  // const form = event.target
+  // const data = getFormFields(form)
+
+  api.allEventIndex()
+    .then(ui.onAllEventIndexSuccess)
+    .catch(ui.onAllEventIndexFailure)
 }
 
 module.exports = {
   onEventCreate,
   onEventUpdate,
   onEventDelete,
-  onEventIndex
+  onEventIndex,
+  onAllEventIndex
 }

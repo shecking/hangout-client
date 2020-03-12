@@ -38,6 +38,16 @@ const onEventIndexFailure = function (data) {
   $('#user-messages').html('Index event failed')
 }
 
+const onAllEventIndexSuccess = function (data) {
+  $('#change-password').trigger('reset')
+  console.log(data)
+  $('#user-messages').html('index event worked')
+}
+
+const onAllEventIndexFailure = function (data) {
+  $('#user-messages').html('Index event failed')
+}
+
 module.exports = {
   onEventCreateSuccess,
   onEventCreateFailure,
@@ -46,5 +56,7 @@ module.exports = {
   onEventDeleteSuccess,
   onEventDeleteFailure,
   onEventIndexSuccess,
-  onEventIndexFailure
+  onEventIndexFailure,
+  onAllEventIndexSuccess,
+  onAllEventIndexFailure
 }

@@ -26,4 +26,5 @@ $(() => {
   $('#update-event').on('submit', rsvp.onEventUpdate)
   $('#delete-event').on('submit', rsvp.onEventDelete)
   $('#index-event').on('submit', rsvp.onEventIndex)
+  $('#index-all-events').on('submit', rsvp.onAllEventIndex)
 })

@@ -1,6 +1,7 @@
 'user strict'
 
 const getFormFields = require('./../../../lib/get-form-fields')
+const store = require('./../store')
 const api = require('./api-rsvp')
 const ui = require('./ui-rsvp')
 
@@ -66,11 +67,42 @@ const onAllEventIndex = function (event) {
     .catch(ui.onAllEventIndexFailure)
 }
 
+const onRsvpEvent = function (event) {
+  event.preventDefault()
+
+  const form = event.target
+  const data = getFormFields(form)
+  data.user = store.user
+  api.rsvpEvent(data)
+    .then(ui.onRsvpEventSuccess)
+    .catch(ui.onRsvpEventFailure)
+
+    .then(api.rsvpUser(data))
+    .then(ui.onRsvpUserSuccess)
+    .catch(ui.onRsvpUserFailure)
+}
+
+const onUnRsvpEvent = function (event) {
+  event.preventDefault()
+
+  const form = event.target
+  const data = getFormFields(form)
+  data.user = store.user
+  api.unRsvpEvent(data)
+    .then(ui.onUnRsvpEventSuccess)
+    .catch(ui.onUnRsvpEventFailure)
+
+    .then(api.unRsvpUser(data))
+    .then(ui.onUnRsvpUserSuccess)
+    .catch(ui.onUnRsvpUserFailure)
+}
 
 module.exports = {
   onEventCreate,
   onEventUpdate,
   onEventDelete,
   onEventIndex,
-  onAllEventIndex
+  onAllEventIndex,
+  onRsvpEvent,
+  onUnRsvpEvent
 }

@@ -61,6 +61,39 @@ const onUpdateHandlebarsFailure = function (data) {
   console.log('update handlebars failed')
 }
 
+const onRsvpEventSuccess = function (data) {
+  $('#user-messages').html('rsvp event worked')
+}
+
+const onRsvpEventFailure = function (data) {
+  $('#user-messages').html('rsvp event failed')
+  console.log(data)
+}
+
+const onUnRsvpEventSuccess = function (data) {
+  $('#user-messages').html('Index event failed')
+}
+
+const onUnRsvpEventFailure = function (data) {
+  $('#user-messages').html('Index event failed')
+}
+
+const onRsvpUserSuccess = function (data) {
+  $('#user-messages').html('Index event failed')
+}
+
+const onRsvpUserFailure = function (data) {
+  $('#user-messages').html('Index event failed')
+}
+
+const onUnRsvpUserSuccess = function (data) {
+  $('#user-messages').html('Index event failed')
+}
+
+const onUnRsvpUserFailure = function (data) {
+  $('#user-messages').html('Index event failed')
+}
+
 module.exports = {
   onEventCreateSuccess,
   onEventCreateFailure,
@@ -73,5 +106,13 @@ module.exports = {
   onAllEventIndexSuccess,
   onAllEventIndexFailure,
   onUpdateHandlebarsSuccess,
-  onUpdateHandlebarsFailure
+  onUpdateHandlebarsFailure,
+  onRsvpEventSuccess,
+  onRsvpEventFailure,
+  onRsvpUserSuccess,
+  onRsvpUserFailure,
+  onUnRsvpEventSuccess,
+  onUnRsvpEventFailure,
+  onUnRsvpUserSuccess,
+  onUnRsvpUserFailure
 }

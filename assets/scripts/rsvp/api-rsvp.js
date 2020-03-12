@@ -45,6 +45,46 @@ const eventIndex = function () {
   })
 }
 
+const rsvpEvent = function (data) {
+  return $.ajax({
+    method: 'PATCH',
+    url: config.apiUrl + '/events/rsvp/' + data.event.id,
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
+
+const rsvpUser = function (data) {
+  return $.ajax({
+    method: 'PATCH',
+    url: config.apiUrl + '/users/rsvp/' + data.user.id,
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
+
+const unRsvpEvent = function (data) {
+  return $.ajax({
+    method: 'PATCH',
+    url: config.apiUrl + '/events/unrsvp/' + data.event.id,
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
+
+const unRsvpUser = function (data) {
+  return $.ajax({
+    method: 'PATCH',
+    url: config.apiUrl + '/users/rsvp/' + data.event.id,
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
+
 const allEventIndex = function () {
   return $.ajax({
     method: 'GET',
@@ -57,5 +97,9 @@ module.exports = {
   eventUpdate,
   eventDelete,
   eventIndex,
-  allEventIndex
+  allEventIndex,
+  rsvpEvent,
+  rsvpUser,
+  unRsvpEvent,
+  unRsvpUser
 }

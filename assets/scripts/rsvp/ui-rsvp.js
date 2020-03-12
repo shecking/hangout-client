@@ -62,36 +62,39 @@ const onUpdateHandlebarsFailure = function (data) {
 }
 
 const onRsvpEventSuccess = function (data) {
+  console.log(data)
   $('#user-messages').html('rsvp event worked')
 }
 
 const onRsvpEventFailure = function (data) {
   $('#user-messages').html('rsvp event failed')
-  console.log(data)
 }
 
 const onUnRsvpEventSuccess = function (data) {
-  $('#user-messages').html('Index event failed')
+  console.log(data)
+  $('#user-messages').html('unrsvp event worked')
 }
 
 const onUnRsvpEventFailure = function (data) {
-  $('#user-messages').html('Index event failed')
+  $('#user-messages').html('unrsvp event failed')
 }
 
 const onRsvpUserSuccess = function (data) {
-  $('#user-messages').html('Index event failed')
+  console.log(data)
+  $('#user-messages').html('rsvp user worked')
 }
 
 const onRsvpUserFailure = function (data) {
-  $('#user-messages').html('Index event failed')
+  $('#user-messages').html('on rsvp user failed')
 }
 
 const onUnRsvpUserSuccess = function (data) {
-  $('#user-messages').html('Index event failed')
+  console.log(data)
+  $('#user-messages').html('on unrsvp user worked')
 }
 
 const onUnRsvpUserFailure = function (data) {
-  $('#user-messages').html('Index event failed')
+  $('#user-messages').html('unrsvp failed')
 }
 
 module.exports = {

@@ -29,5 +29,5 @@ $(() => {
   $('#index-all-events').on('submit', rsvp.onAllEventIndex)
 
   $('#rsvp-event').on('submit', rsvp.onRsvpEvent)
-  $('#unrsvp-event').on('submit', rsvp.onUnRsvpEvent)
+  $('#unrsvp-events').on('submit', rsvp.onUnRsvpEvent)
 })

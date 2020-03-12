@@ -72,13 +72,14 @@ const onRsvpEvent = function (event) {
 
   const form = event.target
   const data = getFormFields(form)
+  data.user = store.user
   api.rsvpEvent(data)
     .then(ui.onRsvpEventSuccess)
     .catch(ui.onRsvpEventFailure)
 
-  // api.rsvpUser(data)
-  //   .then(ui.onRsvpUserSuccess)
-  //   .catch(ui.onRsvpUserFailure)
+    .then(api.rsvpUser(data))
+    .then(ui.onRsvpUserSuccess)
+    .catch(ui.onRsvpUserFailure)
 }
 
 const onUnRsvpEvent = function (event) {
@@ -86,16 +87,15 @@ const onUnRsvpEvent = function (event) {
 
   const form = event.target
   const data = getFormFields(form)
-
+  data.user = store.user
   api.unRsvpEvent(data)
     .then(ui.onUnRsvpEventSuccess)
     .catch(ui.onUnRsvpEventFailure)
 
-  api.unRsvpUser(data)
+    .then(api.unRsvpUser(data))
     .then(ui.onUnRsvpUserSuccess)
     .catch(ui.onUnRsvpUserFailure)
 }
-
 
 module.exports = {
   onEventCreate,

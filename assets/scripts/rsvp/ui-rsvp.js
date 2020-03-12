@@ -4,7 +4,7 @@ const store = require('./../store')
 const showEventsTemplate = require('../templates/event-listing.handlebars')
 
 const onEventCreateSuccess = function (data) {
-  $('#change-password').trigger('reset')
+  $('#event-create').trigger('reset')
   $('#user-messages').html('create event worked')
 }
 
@@ -13,7 +13,7 @@ const onEventCreateFailure = function (data) {
 }
 
 const onEventUpdateSuccess = function (data) {
-  $('#change-password').trigger('reset')
+  $('#update-event').trigger('reset')
   $('#user-messages').html('update event worked')
 }
 
@@ -22,7 +22,7 @@ const onEventUpdateFailure = function (data) {
 }
 
 const onEventDeleteSuccess = function (data) {
-  $('#change-password').trigger('reset')
+  $('#delete-event').trigger('reset')
   $('#user-messages').html('delete event worked')
 }
 
@@ -31,10 +31,11 @@ const onEventDeleteFailure = function (data) {
 }
 
 const onEventIndexSuccess = function (data) {
-  $('#change-password').trigger('reset')
+  $('#index-events').trigger('reset')
+  $('#user-messages').html('index event worked')
+
   const showEventsHtml = showEventsTemplate({ hangouts: data.events })
   $('#event-list').html(showEventsHtml)
-  $('#user-messages').html('index event worked')
 }
 
 const onEventIndexFailure = function (data) {
@@ -42,13 +43,22 @@ const onEventIndexFailure = function (data) {
 }
 
 const onAllEventIndexSuccess = function (data) {
-  $('#change-password').trigger('reset')
+  $('#index-all-event').trigger('reset')
   console.log(data)
   $('#user-messages').html('index event worked')
 }
 
 const onAllEventIndexFailure = function (data) {
   $('#user-messages').html('Index event failed')
+}
+
+const onUpdateHandlebarsSuccess = function (data) {
+  const showEventsHtml = showEventsTemplate({ hangouts: data.events })
+  $('#event-list').html(showEventsHtml)
+}
+
+const onUpdateHandlebarsFailure = function (data) {
+  console.log('update handlebars failed')
 }
 
 module.exports = {
@@ -61,5 +71,7 @@ module.exports = {
   onEventIndexSuccess,
   onEventIndexFailure,
   onAllEventIndexSuccess,
-  onAllEventIndexFailure
+  onAllEventIndexFailure,
+  onUpdateHandlebarsSuccess,
+  onUpdateHandlebarsFailure
 }

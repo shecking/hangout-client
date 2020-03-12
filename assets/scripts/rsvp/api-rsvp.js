@@ -17,7 +17,7 @@ const eventCreate = function (data) {
 const eventUpdate = function (data) {
   return $.ajax({
     method: 'PATCH',
-    url: config.apiUrl + '/events',
+    url: config.apiUrl + '/events/' + data.event.id,
     headers: {
       Authorization: 'Token token=' + store.user.token
     },
@@ -28,11 +28,10 @@ const eventUpdate = function (data) {
 const eventDelete = function (data) {
   return $.ajax({
     method: 'DELETE',
-    url: config.apiUrl + '/events',
+    url: config.apiUrl + '/events/' + data.event.id,
     headers: {
       Authorization: 'Token token=' + store.user.token
-    },
-    data
+    }
   })
 }
 

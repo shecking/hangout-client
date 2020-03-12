@@ -79,6 +79,7 @@ const onRsvpEvent = function (event) {
 
     .then(api.rsvpUser(data))
     .then(ui.onRsvpUserSuccess)
+    .then(updateHandlebars)
     .catch(ui.onRsvpUserFailure)
 }
 
@@ -94,6 +95,7 @@ const onUnRsvpEvent = function (event) {
 
     .then(api.unRsvpUser(data))
     .then(ui.onUnRsvpUserSuccess)
+    .then(updateHandlebars)
     .catch(ui.onUnRsvpUserFailure)
 }
 

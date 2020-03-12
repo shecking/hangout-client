@@ -71,7 +71,6 @@ const onRsvpEventFailure = function (data) {
 }
 
 const onUnRsvpEventSuccess = function (data) {
-  console.log(data)
   $('#user-messages').html('unrsvp event worked')
 }
 
@@ -80,7 +79,7 @@ const onUnRsvpEventFailure = function (data) {
 }
 
 const onRsvpUserSuccess = function (data) {
-  console.log(data)
+  $('#rsvp-event').trigger('reset')
   $('#user-messages').html('rsvp user worked')
 }
 
@@ -89,7 +88,7 @@ const onRsvpUserFailure = function (data) {
 }
 
 const onUnRsvpUserSuccess = function (data) {
-  console.log(data)
+  $('#rsvp-event').trigger('reset')
   $('#user-messages').html('on unrsvp user worked')
 }
 

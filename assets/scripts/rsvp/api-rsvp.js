@@ -58,7 +58,7 @@ const rsvpEvent = function (data) {
 const rsvpUser = function (data) {
   return $.ajax({
     method: 'PATCH',
-    url: config.apiUrl + '/users/rsvp/' + data.user._id,
+    url: config.apiUrl + '/users/rsvp/' + data.event.id,
     headers: {
       Authorization: 'Token token=' + store.user.token
     }
@@ -78,7 +78,7 @@ const unRsvpEvent = function (data) {
 const unRsvpUser = function (data) {
   return $.ajax({
     method: 'PATCH',
-    url: config.apiUrl + '/users/rsvp/' + data.user._id,
+    url: config.apiUrl + '/users/unrsvp/' + data.event.id,
     headers: {
       Authorization: 'Token token=' + store.user.token
     }

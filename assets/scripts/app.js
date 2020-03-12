@@ -1,6 +1,5 @@
 'use strict'
 
-
 const user = require('./user/events-user')
 const rsvp = require('./rsvp/events-rsvp')
 // use require with a reference to bundle the file and use it in this file
@@ -21,6 +20,7 @@ $(() => {
   $('#sign-in').on('submit', user.onSignIn)
   $('#sign-out').on('submit', user.onSignOut)
   $('#change-password').on('submit', user.onChangePassword)
+  $('#get-events-array').on('submit', user.onGetEventsArray)
 
   $('#create-event').on('submit', rsvp.onEventCreate)
   $('#update-event').on('submit', rsvp.onEventUpdate)

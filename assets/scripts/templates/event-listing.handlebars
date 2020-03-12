@@ -11,6 +11,12 @@
 
           <h6 class="card-title">{{hangout._id}}</h6>
 
+          {{#if hangout.users}}
+            <h6 class="card-title">{{hangout.users}}</h6>
+          {{else}}
+            <h6>(Empty)</h6>
+          {{/if}}
+
           {{#if hangout.date}}
             <h6 class="card-title">{{hangout.date}}</h6>
           {{else}}

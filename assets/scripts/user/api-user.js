@@ -40,9 +40,20 @@ const onChangePassword = function (data) {
   })
 }
 
+const onGetEventsArray = function () {
+  return $.ajax({
+    method: 'GET',
+    url: config.apiUrl + '/user/' + store.user._id,
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
+
 module.exports = {
   onSignUp,
   onSignIn,
   onSignOut,
-  onChangePassword
+  onChangePassword,
+  onGetEventsArray
 }

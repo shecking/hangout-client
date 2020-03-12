@@ -48,9 +48,21 @@ const onChangePassword = function (event) {
     .catch(ui.onChangePasswordFailure)
 }
 
+const onGetEventsArray = function (event) {
+  event.preventDefault()
+
+  const form = event.target
+  const data = getFormFields(form)
+
+  api.onGetEventsArray(data)
+    .then(ui.onGetEventsArraySuccess)
+    .catch(ui.onGetEventsArrayFailure)
+}
+
 module.exports = {
   onSignUp,
   onSignIn,
   onSignOut,
-  onChangePassword
+  onChangePassword,
+  onGetEventsArray
 }

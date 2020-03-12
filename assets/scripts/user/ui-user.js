@@ -64,6 +64,14 @@ const onChangePasswordFailure = function (data) {
   $('#user-messages').html('change password failed')
 }
 
+const onGetEventsArraySuccess = function (data) {
+  console.log(data.user.events)
+}
+
+const onGetEventsArrayFailure = function (data) {
+  $('#user-messages').html('nah dawg')
+}
+
 module.exports = {
   onSignUpSuccess,
   onSignUpFailure,
@@ -72,5 +80,7 @@ module.exports = {
   onSignOutSuccess,
   onSignOutFailure,
   onChangePasswordSuccess,
-  onChangePasswordFailure
+  onChangePasswordFailure,
+  onGetEventsArraySuccess,
+  onGetEventsArrayFailure
 }

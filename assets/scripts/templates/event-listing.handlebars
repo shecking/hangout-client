@@ -1,0 +1,41 @@
+{{#each hangouts as |hangout|}}
+    <div class="col-sm-3">
+      <div class="card">
+        <div data-id="{{hangout.id}}" class="card-body">
+
+          {{#if hangout.title}}
+            <h5 class="card-title">{{hangout.title}}</h5>
+          {{else}}
+            <h5>(Empty)</h5>
+          {{/if}}
+
+          <h6 class="card-title">{{hangout._id}}</h6>
+
+          {{#if hangout.date}}
+            <h6 class="card-title">{{hangout.date}}</h6>
+          {{else}}
+            <h6>(Empty)</h6>
+          {{/if}}
+
+          {{#if hangout.time}}
+            <h6 class="card-title">{{hangout.time}}</h6>
+          {{else}}
+            <h6>(Empty)</h6>
+          {{/if}}
+
+          {{#if hangout.location}}
+            <h6 class="card-title">{{hangout.location}}</h6>
+          {{else}}
+            <h6>(Empty)</h6>
+          {{/if}}
+
+          {{#if hangout.description}}
+            <h6 class="card-title">{{hangout.description}}</h6>
+          {{else}}
+            <h6>(Empty)</h6>
+          {{/if}}
+
+        </div>
+      </div>
+    </div>
+{{/each}}

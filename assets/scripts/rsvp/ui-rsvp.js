@@ -1,5 +1,7 @@
 'use strict'
+
 const store = require('./../store')
+const showEventsTemplate = require('../templates/event-listing.handlebars')
 
 const onEventCreateSuccess = function (data) {
   $('#change-password').trigger('reset')
@@ -30,7 +32,8 @@ const onEventDeleteFailure = function (data) {
 
 const onEventIndexSuccess = function (data) {
   $('#change-password').trigger('reset')
-  console.log(data)
+  const showEventsHtml = showEventsTemplate({ hangouts: data.events })
+  $('#event-list').html(showEventsHtml)
   $('#user-messages').html('index event worked')
 }
 

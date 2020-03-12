@@ -38,5 +38,34 @@
       <form id='sign-out'>
           <input type='submit' value='Sign out!'>
       </form>
+
+
+
+
+
+  <form id='create-event'>
+    <input name='event[title]' type='text' placeholder='example@example'>
+    <!-- <input name='date' type='text' placeholder='password'> -->
+    <input name='event[time]' type='text' placeholder='password'>
+    <input name='event[location]' type='text' placeholder='password'>
+    <input name='event[description]' type='text' placeholder='password'>
+    <input type='submit' value='Create Event!'>
+  </form>
+
+  <form id='update-event'>
+    <input name='credentials[email]' type='email' placeholder='example@example'>
+    <input name='credentials[password]' type='password' placeholder='password'>
+    <input type='submit' value='Update Event!'>
+  </form>
+
+  <form id='delete-event'>
+    <input name='passwords[old]' type='password' placeholder='password'>
+    <input name='passwords[new]' type='password' placeholder='password'>
+    <input type='submit' value='Delete Event!'>
+  </form>
+
+  <form id='index-event'>
+      <input type='submit' value='Index event!'>
+  </form>
     </body>
 </html>

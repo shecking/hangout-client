@@ -115,6 +115,12 @@ const showOwned = function (data) {
     .catch(ui.showOwnedFailure)
 }
 
+const onPageLoad = function () {
+  api.allEventIndex()
+    .then(ui.onUpdateHandlebarsSuccess)
+    .catch(ui.onUpdateHandlebarsFailure)
+}
+
 module.exports = {
   onEventCreate,
   onEventUpdate,
@@ -123,5 +129,6 @@ module.exports = {
   onAllEventIndex,
   onRsvpEvent,
   onUnRsvpEvent,
-  showOwned
+  showOwned,
+  onPageLoad
 }

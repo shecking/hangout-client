@@ -37,7 +37,6 @@ const onEventCreate = function (event) {
       .then(updateHandlebars)
       .catch(ui.onEventCreateFailure)
   }
-
 }
 const onEventUpdate = function (event) {
   event.preventDefault()

@@ -1,1 +1,61 @@
 @import '~bootstrap/scss/bootstrap';
+
+$nav-background: #1b265c;
+$text-color: #e1f4f4;
+$cursive-font: 'Bellota', cursive;
+$card-color: #e1f4f4;
+$card-text-color: #006a8e;
+$sidebar-color: #006a8e;
+$body-color: #b2dab5;
+
+body {
+  background-color: $body-color;
+  font-family: $cursive-font;
+  margin: 0;
+  padding: 0;
+}
+
+.card {
+  background-color: $card-color;
+  border-color: $nav-background;
+  border-width: 3px;
+  color: $card-text-color;
+  margin: 5px;
+}
+
+.container-fluid {
+  height: 100%;
+  margin: 0;
+  width: 100%;
+}
+
+.events-column {
+  margin-left: 180px;
+  margin-top: 85px;
+}
+
+h1 {
+  background-color: $nav-background;
+  color: $text-color;
+  padding: 10px 30px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+.sidebar {
+  background-color: $sidebar-color;
+  display: inline-block;
+  height: 100%;
+  overflow: auto;
+  padding: 10px;
+  position: fixed;
+  width: 200px;
+  z-index: 1;
+}
+
+.user-messages {
+  color: $text-color;
+  margin-top: 85px;
+}

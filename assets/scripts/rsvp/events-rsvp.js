@@ -22,11 +22,22 @@ const onEventCreate = function (event) {
 
   const form = event.target
   const data = getFormFields(form)
+  console.log(data)
+  if (data.event.title === '') {
+    $('#user-messages').html('Title cannot empty, please try again')
+  } else if (data.event.date === '') {
+    $('#user-messages').html('Date cannot empty, please try again')
+  } else if (data.event.time === '') {
+    $('#user-messages').html('Time cannot empty, please try again')
+  } else if (data.event.location === '') {
+    $('#user-messages').html('Location cannot empty, please try again')
+  } else {
+    api.eventCreate(data)
+      .then(ui.onEventCreateSuccess)
+      .then(updateHandlebars)
+      .catch(ui.onEventCreateFailure)
+  }
 
-  api.eventCreate(data)
-    .then(ui.onEventCreateSuccess)
-    .then(updateHandlebars)
-    .catch(ui.onEventCreateFailure)
 }
 const onEventUpdate = function (event) {
   event.preventDefault()

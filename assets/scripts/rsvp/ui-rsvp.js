@@ -96,6 +96,17 @@ const onUnRsvpUserFailure = function (data) {
   $('#user-messages').html('unrsvp failed')
 }
 
+const showOwnedSuccess = function (data) {
+  console.log('return all owned')
+  console.log(data)
+  const showOwnedEvents = showEventsTemplate({ hangouts: data.events })
+  $('#event-list').html(showOwnedEvents)
+}
+
+const showOwnedFailure = function (data) {
+  $('#user-messages').html('owned failed')
+}
+
 module.exports = {
   onEventCreateSuccess,
   onEventCreateFailure,
@@ -116,5 +127,7 @@ module.exports = {
   onUnRsvpEventSuccess,
   onUnRsvpEventFailure,
   onUnRsvpUserSuccess,
-  onUnRsvpUserFailure
+  onUnRsvpUserFailure,
+  showOwnedSuccess,
+  showOwnedFailure
 }

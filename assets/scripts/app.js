@@ -27,7 +27,8 @@ $(() => {
   $('#delete-event').on('submit', rsvp.onEventDelete)
   $('#index-event').on('submit', rsvp.onEventIndex)
   $('#index-all-events').on('submit', rsvp.onAllEventIndex)
-
   $('#rsvp-event').on('submit', rsvp.onRsvpEvent)
   $('#unrsvp-events').on('submit', rsvp.onUnRsvpEvent)
+
+  $('#show-owned').on('submit', rsvp.showOwned)
 })

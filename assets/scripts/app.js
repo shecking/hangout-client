@@ -16,6 +16,7 @@ $(() => {
   $('#update-event').hide()
   $('#delete-event').hide()
   $('#index-event').hide()
+  $('#show-owned').hide()
 
   $('#sign-up').on('submit', user.onSignUp)
   $('#sign-in').on('submit', user.onSignIn)

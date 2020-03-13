@@ -21,6 +21,7 @@ const onSignInSuccess = function (data) {
   $('#delete-event').show()
   $('#index-event').show()
   $('#index-all-events').show()
+  $('#show-owned').show()
 
   $('#sign-in').hide()
   $('#sign-up').hide()
@@ -47,6 +48,7 @@ const onSignOutSuccess = function (data) {
   $('#delete-event').hide()
   $('#index-event').hide()
   $('#index-all-events').hide()
+  $('#show-owned').hide()
 
   $('#sign-in').show()
   $('#sign-up').show()

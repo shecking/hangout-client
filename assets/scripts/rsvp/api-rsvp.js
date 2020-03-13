@@ -92,6 +92,16 @@ const allEventIndex = function () {
   })
 }
 
+const showOwned = function () {
+  return $.ajax({
+    method: 'GET',
+    url: config.apiUrl + '/events/owned',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
+
 module.exports = {
   eventCreate,
   eventUpdate,
@@ -101,5 +111,6 @@ module.exports = {
   rsvpEvent,
   rsvpUser,
   unRsvpEvent,
-  unRsvpUser
+  unRsvpUser,
+  showOwned
 }

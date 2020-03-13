@@ -99,6 +99,13 @@ const onUnRsvpEvent = function (event) {
     .catch(ui.onUnRsvpUserFailure)
 }
 
+const showOwned = function (data) {
+  event.preventDefault()
+  api.showOwned()
+    .then(ui.showOwnedSuccess)
+    .catch(ui.showOwnedFailure)
+}
+
 module.exports = {
   onEventCreate,
   onEventUpdate,
@@ -106,5 +113,6 @@ module.exports = {
   onEventIndex,
   onAllEventIndex,
   onRsvpEvent,
-  onUnRsvpEvent
+  onUnRsvpEvent,
+  showOwned
 }

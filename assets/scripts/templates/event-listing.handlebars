@@ -9,40 +9,68 @@
             <h5>(Empty)</h5>
           {{/if}}
 
-          <h6 class="card-title">event.id:{{hangout._id}}</h6>
 
-          {{#if hangout.users}}
-            <h6 class="card-title">{{hangout.users}}</h6>
-          {{else}}
-            <h6>(Empty)</h6>
-          {{/if}}
-
-          {{#if hangout.date}}
-            <h6 class="card-title">{{hangout.date}}</h6>
-          {{else}}
-            <h6>(Empty)</h6>
-          {{/if}}
-
-          {{#if hangout.time}}
-            <h6 class="card-title">{{hangout.time}}</h6>
-          {{else}}
-            <h6>(Empty)</h6>
-          {{/if}}
-
-          {{#if hangout.location}}
-            <h6 class="card-title">{{hangout.location}}</h6>
-          {{else}}
-            <h6>(Empty)</h6>
-          {{/if}}
-
-          {{#if hangout.description}}
-            <h6 class="card-title">{{hangout.description}}</h6>
-          {{else}}
-            <h6>(Empty)</h6>
-          {{/if}}
 
           <button type="submit" class="btn btn-warning rsvp-event">RSVP</button>
           <button type="submit" class="btn btn-warning unrsvp-event">UnRSVP</button>
+
+
+
+          <!-- Button trigger modal -->
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+            Event Information
+          </button>
+
+          <!-- Modal -->
+          <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLongTitle">{{hangout.title}}</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <h6 class="card-title">event.id:{{hangout._id}}</h6>
+
+                  {{#if hangout.users}}
+                    <h6 class="card-title">{{hangout.users}}</h6>
+                  {{else}}
+                    <h6>(Empty)</h6>
+                  {{/if}}
+
+                  {{#if hangout.date}}
+                    <h6 class="card-title">{{hangout.date}}</h6>
+                  {{else}}
+                    <h6>(Empty)</h6>
+                  {{/if}}
+
+                  {{#if hangout.time}}
+                    <h6 class="card-title">{{hangout.time}}</h6>
+                  {{else}}
+                    <h6>(Empty)</h6>
+                  {{/if}}
+
+                  {{#if hangout.location}}
+                    <h6 class="card-title">{{hangout.location}}</h6>
+                  {{else}}
+                    <h6>(Empty)</h6>
+                  {{/if}}
+
+                  {{#if hangout.description}}
+                    <h6 class="card-title">{{hangout.description}}</h6>
+                  {{else}}
+                    <h6>(Empty)</h6>
+                  {{/if}}
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
 
         </div>
       </div>

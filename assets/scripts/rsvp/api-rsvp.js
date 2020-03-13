@@ -25,10 +25,10 @@ const eventUpdate = function (data) {
   })
 }
 
-const eventDelete = function (data) {
+const eventDelete = function (eventId) {
   return $.ajax({
     method: 'DELETE',
-    url: config.apiUrl + '/events/' + data.event.id,
+    url: config.apiUrl + '/events/' + eventId,
     headers: {
       Authorization: 'Token token=' + store.user.token
     }

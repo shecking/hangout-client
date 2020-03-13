@@ -70,9 +70,8 @@ const onAllEventIndex = function (event) {
 const onRsvpEvent = function (event) {
   event.preventDefault()
 
-  const form = event.target
-  const data = getFormFields(form)
-  data.user = store.user
+  const data = $(event.target).closest('div').data('id')
+
   api.rsvpEvent(data)
     .then(ui.onRsvpEventSuccess)
     .catch(ui.onRsvpEventFailure)
@@ -86,9 +85,8 @@ const onRsvpEvent = function (event) {
 const onUnRsvpEvent = function (event) {
   event.preventDefault()
 
-  const form = event.target
-  const data = getFormFields(form)
-  data.user = store.user
+  const data = $(event.target).closest('div').data('id')
+
   api.unRsvpEvent(data)
     .then(ui.onUnRsvpEventSuccess)
     .catch(ui.onUnRsvpEventFailure)

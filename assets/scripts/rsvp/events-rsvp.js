@@ -117,8 +117,8 @@ const showOwned = function (data) {
 
 const onPageLoad = function () {
   api.allEventIndex()
-    .then(ui.onUpdateHandlebarsSuccess)
-    .catch(ui.onUpdateHandlebarsFailure)
+    .then(ui.showUnsignedSuccess)
+    .catch(ui.showUnsignedFailure)
 }
 
 module.exports = {

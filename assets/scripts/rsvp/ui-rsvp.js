@@ -3,7 +3,7 @@
 const store = require('./../store')
 const showEventsTemplate = require('../templates/event-listing.handlebars')
 const showOwnedTemplate = require('../templates/event-owned.handlebars')
-
+const showUnsignedTemplate = require('../templates/events-signedOut.handlebars')
 const onEventCreateSuccess = function (data) {
   $('#event-create').trigger('reset')
   $('#user-messages').html('create event worked')
@@ -108,6 +108,17 @@ const showOwnedFailure = function (data) {
   $('#user-messages').html('owned failed')
 }
 
+const showUnsignedSuccess = function (data) {
+  const showUnsignedEvents = showUnsignedTemplate({ hangouts: data.events })
+  $('#event-list').html(showUnsignedEvents)
+}
+
+const showUnsignedFailure = function (data) {
+  $('#user-messages').html('unsigned event failed')
+}
+
+
+
 module.exports = {
   onEventCreateSuccess,
   onEventCreateFailure,
@@ -130,5 +141,7 @@ module.exports = {
   onUnRsvpUserSuccess,
   onUnRsvpUserFailure,
   showOwnedSuccess,
-  showOwnedFailure
+  showOwnedFailure,
+  showUnsignedSuccess,
+  showUnsignedFailure
 }

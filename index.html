@@ -13,7 +13,6 @@
   <body>
     <h1>HangOut</h1>
       <div class='sidebar'>
-
         <div class='user-actions'>
           <div class='user-messages' id='user-messages'></div>
           <form id='sign-up'>
@@ -52,7 +51,8 @@
           <form id='create-event'>
             <input name='event[title]' type='text' placeholder='Event title'>
             <br>
-            <!-- <input name='date' type='text' placeholder='password'> -->
+            <input name='event[date]' type='date' placeholder='Date of event'>
+            <br>
             <input name='event[time]' type='text' placeholder='Time'>
             <br>
             <input name='event[location]' type='text' placeholder='Location'>
@@ -63,43 +63,14 @@
             <br>
           </form>
 
-        <!-- <form id='update-event'>
-          <input name='event[title]' type='text' placeholder='The best event ever'>
-          <input name='date' type='text' placeholder='password'> -->
-          <!-- <input name='event[time]' type='text' placeholder='16:04'>
-          <input name='event[location]' type='text' placeholder='My house'>
-          <input name='event[description]' type='text' placeholder='Fun time'>
-          <input name='event[id]' type='text' placeholder='id'>
-          <input type='submit' value='Update Event!'>
-        </form>
-
-        <form id='delete-event'>
-          <input name='event[id]' type='text' placeholder='id'>
-          <input type='submit' value='Delete Event!'>
-        </form> -->
-
           <form id='index-event'>
             <input type='submit' value='Index event!'>
           </form>
 
-          <!-- <form id='index-all-events'>
-            <input type='submit' value='Index all events!'>
-          </form> -->
+          <form id='show-owned'>
+            <input type='submit' value="show owned">
+          </form>
 
-
-        <!-- <form id='rsvp-event'>
-            <input name='event[id]' type='text' placeholder='id'>
-            <input type='submit' value='rsvp event!'>
-        </form>
-
-        <form id='unrsvp-events'>
-            <input name='event[id]' type='text' placeholder='id'>
-            <input type='submit' value='un rsvp events!'>
-        </form> -->
-
-          <!-- <form id='get-events-array'>
-            <input type='submit' value="Get RSVP'd event IDs">
-          </form> -->
         </div>
 
       </div>

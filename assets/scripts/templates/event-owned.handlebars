@@ -1,7 +1,7 @@
 {{#each hangouts as |hangout|}}
     <div class="col-sm-3">
       <div class="card">
-        <div data-id="{{hangout.id}}" class="card-body">
+        <div data-id="{{hangout._id}}" class="card-body">
 
           {{#if hangout.title}}
             <h5 class="card-title">{{hangout.title}}</h5>
@@ -40,6 +40,10 @@
           {{else}}
             <h6>(Empty)</h6>
           {{/if}}
+
+          <button type="submit" class="btn btn-danger delete-event">Delete</button>
+          <button type="submit" class="btn btn-warning rsvp-event">RSVP</button>
+          <button type="submit" class="btn btn-warning unrsvp-event">UnRSVP</button>
 
         </div>
       </div>

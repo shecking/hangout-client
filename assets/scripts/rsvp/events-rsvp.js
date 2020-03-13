@@ -11,6 +11,12 @@ const updateHandlebars = function () {
     .catch(ui.onUpdateHandlebarsFailure)
 }
 
+const updateOwnedHandlebars = function () {
+  api.showOwned()
+    .then(ui.showOwnedSuccess)
+    .catch(ui.showOwnedFailure)
+}
+
 const onEventCreate = function (event) {
   event.preventDefault()
 
@@ -41,7 +47,7 @@ const onEventDelete = function (event) {
 
   api.eventDelete(data)
     .then(ui.onEventDeleteSuccess)
-    .then(updateHandlebars)
+    .then(updateOwnedHandlebars)
     .catch(ui.onEventDeleteFailure)
 }
 

@@ -2,6 +2,7 @@
 
 const store = require('./../store')
 const showEventsTemplate = require('../templates/event-listing.handlebars')
+const showOwnedTemplate = require('../templates/event-owned.handlebars')
 
 const onEventCreateSuccess = function (data) {
   $('#event-create').trigger('reset')
@@ -99,7 +100,7 @@ const onUnRsvpUserFailure = function (data) {
 const showOwnedSuccess = function (data) {
   console.log('return all owned')
   console.log(data)
-  const showOwnedEvents = showEventsTemplate({ hangouts: data.events })
+  const showOwnedEvents = showOwnedTemplate({ hangouts: data.events })
   $('#event-list').html(showOwnedEvents)
 }
 

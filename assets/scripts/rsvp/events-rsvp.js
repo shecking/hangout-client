@@ -37,8 +37,8 @@ const onEventUpdate = function (event) {
 const onEventDelete = function (event) {
   event.preventDefault()
 
-  const form = event.target
-  const data = getFormFields(form)
+  const data = $(event.target).closest('div').data('id')
+
   api.eventDelete(data)
     .then(ui.onEventDeleteSuccess)
     .then(updateHandlebars)

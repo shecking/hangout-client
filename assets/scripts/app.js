@@ -9,6 +9,7 @@ const rsvp = require('./rsvp/events-rsvp')
 // require('./example')
 
 $(() => {
+  rsvp.onPageLoad()
   $('#sign-out').hide()
   $('#change-password').hide()
   $('#create-event').hide()

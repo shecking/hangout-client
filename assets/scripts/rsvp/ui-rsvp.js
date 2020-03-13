@@ -4,43 +4,44 @@ const store = require('./../store')
 const showEventsTemplate = require('../templates/event-listing.handlebars')
 const showOwnedTemplate = require('../templates/event-owned.handlebars')
 const showUnsignedTemplate = require('../templates/events-signedOut.handlebars')
+
 const onEventCreateSuccess = function (data) {
   $('#event-create').trigger('reset')
-  $('#user-messages').html('create event worked')
+  $('#user-messages').html('Event created')
 }
 
 const onEventCreateFailure = function (data) {
-  $('#user-messages').html('create event failed')
+  $('#user-messages').html('Failed to create event, please try again')
 }
 
 const onEventUpdateSuccess = function (data) {
   $('#update-event').trigger('reset')
-  $('#user-messages').html('update event worked')
+  $('#user-messages').html('Event updated')
 }
 
 const onEventUpdateFailure = function (data) {
-  $('#user-messages').html('update event failed')
+  $('#user-messages').html('Failed to update event, please try again')
 }
 
 const onEventDeleteSuccess = function (data) {
   $('#delete-event').trigger('reset')
-  $('#user-messages').html('delete event worked')
+  $('#user-messages').html('Event was deleted')
 }
 
 const onEventDeleteFailure = function (data) {
-  $('#user-messages').html('delete event failed')
+  $('#user-messages').html('Failed to delete event, please try again')
 }
 
 const onEventIndexSuccess = function (data) {
   $('#index-events').trigger('reset')
-  $('#user-messages').html('index event worked')
+  $('#user-messages').html('Showing all events')
 
   const showEventsHtml = showEventsTemplate({ hangouts: data.events })
   $('#event-list').html(showEventsHtml)
 }
 
 const onEventIndexFailure = function (data) {
-  $('#user-messages').html('Index event failed')
+  $('#user-messages').html('Failed to show all events, please try again')
 }
 
 const onAllEventIndexSuccess = function (data) {

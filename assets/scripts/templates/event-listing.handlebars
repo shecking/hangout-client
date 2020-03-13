@@ -1,5 +1,5 @@
 {{#each hangouts as |hangout|}}
-    <div class="col-sm-3">
+    <div class="col-12">
       <div class="card">
         <div data-id="{{hangout._id}}" class="card-body">
 
@@ -9,16 +9,9 @@
             <h5>(Empty)</h5>
           {{/if}}
 
-
-
-          <button type="submit" class="btn btn-warning rsvp-event">RSVP</button>
-          <button type="submit" class="btn btn-warning unrsvp-event">UnRSVP</button>
-
-
-
           <!-- Button trigger modal -->
           <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
-            Event Information
+            Info
           </button>
 
           <!-- Modal -->
@@ -64,13 +57,12 @@
                     <h6>(Empty)</h6>
                   {{/if}}
                 </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                </div>
               </div>
             </div>
           </div>
 
+          <button type="submit" class="btn btn-info rsvp-event">RSVP</button>
+          <button type="submit" class="btn btn-info unrsvp-event">UnRSVP</button>
 
         </div>
       </div>

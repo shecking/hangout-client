@@ -23,7 +23,8 @@ $(() => {
   $('#get-events-array').on('submit', user.onGetEventsArray)
 
   $('#create-event').on('submit', rsvp.onEventCreate)
-  $('#update-event').on('submit', rsvp.onEventUpdate)
+  $('#event-list').on('submit', '.update-event', rsvp.onEventUpdate)
+
   $('#event-list').on('click', '.delete-event', rsvp.onEventDelete)
   $('#index-event').on('submit', rsvp.onEventIndex)
   $('#index-all-events').on('submit', rsvp.onAllEventIndex)

@@ -34,9 +34,14 @@ const onEventUpdate = function (event) {
   const form = event.target
   const data = getFormFields(form)
 
-  api.eventUpdate(data)
+  const eventId = $(event.target).closest('div').data('id')
+
+  console.log(eventId)
+  $('#updateModal').modal('hide')
+
+  api.eventUpdate(data, eventId)
     .then(ui.onEventUpdateSuccess)
-    .then(updateHandlebars)
+    .then(updateOwnedHandlebars)
     .catch(ui.onEventUpdateFailure)
 }
 

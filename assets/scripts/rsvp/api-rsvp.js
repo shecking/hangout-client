@@ -14,10 +14,10 @@ const eventCreate = function (data) {
   })
 }
 
-const eventUpdate = function (data) {
+const eventUpdate = function (data, eventId) {
   return $.ajax({
     method: 'PATCH',
-    url: config.apiUrl + '/events/' + data.event.id,
+    url: config.apiUrl + '/events/' + eventId,
     headers: {
       Authorization: 'Token token=' + store.user.token
     },

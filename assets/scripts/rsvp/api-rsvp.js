@@ -45,40 +45,40 @@ const eventIndex = function () {
   })
 }
 
-const rsvpEvent = function (data) {
+const rsvpEvent = function (eventId) {
   return $.ajax({
     method: 'PATCH',
-    url: config.apiUrl + '/events/rsvp/' + data.event.id,
+    url: config.apiUrl + '/events/rsvp/' + eventId,
     headers: {
       Authorization: 'Token token=' + store.user.token
     }
   })
 }
 
-const rsvpUser = function (data) {
+const rsvpUser = function (eventId) {
   return $.ajax({
     method: 'PATCH',
-    url: config.apiUrl + '/users/rsvp/' + data.event.id,
+    url: config.apiUrl + '/users/rsvp/' + eventId,
     headers: {
       Authorization: 'Token token=' + store.user.token
     }
   })
 }
 
-const unRsvpEvent = function (data) {
+const unRsvpEvent = function (eventId) {
   return $.ajax({
     method: 'PATCH',
-    url: config.apiUrl + '/events/unrsvp/' + data.event.id,
+    url: config.apiUrl + '/events/unrsvp/' + eventId,
     headers: {
       Authorization: 'Token token=' + store.user.token
     }
   })
 }
 
-const unRsvpUser = function (data) {
+const unRsvpUser = function (eventId) {
   return $.ajax({
     method: 'PATCH',
-    url: config.apiUrl + '/users/unrsvp/' + data.event.id,
+    url: config.apiUrl + '/users/unrsvp/' + eventId,
     headers: {
       Authorization: 'Token token=' + store.user.token
     }

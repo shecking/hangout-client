@@ -33,10 +33,8 @@ const onEventUpdate = function (event) {
 
   const form = event.target
   const data = getFormFields(form)
-
   const eventId = $(event.target).closest('div').data('id')
 
-  console.log(eventId)
   $('#updateModal').modal('hide')
 
   api.eventUpdate(data, eventId)

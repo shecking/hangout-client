@@ -74,7 +74,6 @@ const onChangePasswordFailure = function (data) {
 }
 
 const onGetEventsArraySuccess = function (data) {
-  console.log(data.user.events)
 }
 
 const onGetEventsArrayFailure = function (data) {

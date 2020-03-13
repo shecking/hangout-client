@@ -45,7 +45,6 @@ const onEventIndexFailure = function (data) {
 
 const onAllEventIndexSuccess = function (data) {
   $('#index-all-event').trigger('reset')
-  console.log(data)
   $('#user-messages').html('index event worked')
 }
 
@@ -59,11 +58,9 @@ const onUpdateHandlebarsSuccess = function (data) {
 }
 
 const onUpdateHandlebarsFailure = function (data) {
-  console.log('update handlebars failed')
 }
 
 const onRsvpEventSuccess = function (data) {
-  console.log(data)
   $('#user-messages').html('rsvp event worked')
 }
 
@@ -98,8 +95,6 @@ const onUnRsvpUserFailure = function (data) {
 }
 
 const showOwnedSuccess = function (data) {
-  console.log('return all owned')
-  console.log(data)
   const showOwnedEvents = showOwnedTemplate({ hangouts: data.events })
   $('#event-list').html(showOwnedEvents)
 }
@@ -116,8 +111,6 @@ const showUnsignedSuccess = function (data) {
 const showUnsignedFailure = function (data) {
   $('#user-messages').html('unsigned event failed')
 }
-
-
 
 module.exports = {
   onEventCreateSuccess,

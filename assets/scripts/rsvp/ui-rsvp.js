@@ -35,7 +35,7 @@ const onEventDeleteFailure = function (data) {
 
 const onEventIndexSuccess = function (data) {
   $('#index-events').trigger('reset')
-  $('#user-messages').html('Showing all events')
+  $('#user-messages').html('Showing events')
   $('#index-event').hide()
   $('#show-owned').show()
 
@@ -44,16 +44,16 @@ const onEventIndexSuccess = function (data) {
 }
 
 const onEventIndexFailure = function (data) {
-  $('#user-messages').html('Failed to show all events, please try again')
+  $('#user-messages').html('Failed to show events, please try again')
 }
 
 const onAllEventIndexSuccess = function (data) {
   $('#index-all-event').trigger('reset')
-  $('#user-messages').html('index event worked')
+  $('#user-messages').html('Showing events')
 }
 
 const onAllEventIndexFailure = function (data) {
-  $('#user-messages').html('Index event failed')
+  $('#user-messages').html('Failed to show events, please try again')
 }
 
 const onUpdateHandlebarsSuccess = function (data) {
@@ -65,37 +65,37 @@ const onUpdateHandlebarsFailure = function (data) {
 }
 
 const onRsvpEventSuccess = function (data) {
-  $('#user-messages').html('rsvp event worked')
+  $('#user-messages').html('Successfully RSVP to event')
 }
 
 const onRsvpEventFailure = function (data) {
-  $('#user-messages').html('rsvp event failed')
+  $('#user-messages').html('Failed to RSVP, please try again')
 }
 
 const onUnRsvpEventSuccess = function (data) {
-  $('#user-messages').html('unrsvp event worked')
+  $('#user-messages').html('Successfully Un-RSVP to event')
 }
 
 const onUnRsvpEventFailure = function (data) {
-  $('#user-messages').html('unrsvp event failed')
+  $('#user-messages').html('Failed to Un-RSVP to event, please try again')
 }
 
 const onRsvpUserSuccess = function (data) {
   $('#rsvp-event').trigger('reset')
-  $('#user-messages').html('rsvp user worked')
+  $('#user-messages').html('Successfully RSVP to event')
 }
 
 const onRsvpUserFailure = function (data) {
-  $('#user-messages').html('on rsvp user failed')
+  $('#user-messages').html('Failed to Un-RSVP to event, please try again')
 }
 
 const onUnRsvpUserSuccess = function (data) {
   $('#rsvp-event').trigger('reset')
-  $('#user-messages').html('on unrsvp user worked')
+  $('#user-messages').html('Successfully Un-RSVP to event')
 }
 
 const onUnRsvpUserFailure = function (data) {
-  $('#user-messages').html('unrsvp failed')
+  $('#user-messages').html('Failed to Un-RSVP to event, please try again')
 }
 
 const showOwnedSuccess = function (data) {
@@ -106,7 +106,7 @@ const showOwnedSuccess = function (data) {
 }
 
 const showOwnedFailure = function (data) {
-  $('#user-messages').html('owned failed')
+  $('#user-messages').html('Showing Your events')
 }
 
 const showUnsignedSuccess = function (data) {
@@ -115,7 +115,7 @@ const showUnsignedSuccess = function (data) {
 }
 
 const showUnsignedFailure = function (data) {
-  $('#user-messages').html('unsigned event failed')
+  $('#user-messages').html('Failed to show events, please try again')
 }
 
 module.exports = {

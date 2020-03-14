@@ -84,8 +84,7 @@
 
           <button type="button" class="btn btn-success" data-toggle="modal" data-target="#updateModal{{hangout._id}}">Update</button>
           <button type="submit" class="btn btn-danger delete-event">Delete</button>
-          <button type="submit" class="btn btn-info rsvp-event">RSVP</button>
-          <button type="submit" class="btn btn-info unrsvp-event">UnRSVP</button>
+          <button type="submit" class="btn btn-info {{rsvpCheck hangout.users}}-event">{{rsvpCheck hangout.users}}</button>
 
         </div>
       </div>

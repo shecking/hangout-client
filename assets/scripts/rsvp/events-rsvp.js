@@ -6,12 +6,18 @@ const api = require('./api-rsvp')
 const ui = require('./ui-rsvp')
 
 const updateHandlebars = function () {
+  $('#index-event').hide()
+  $('#show-owned').show()
+
   api.eventIndex()
     .then(ui.onUpdateHandlebarsSuccess)
     .catch(ui.onUpdateHandlebarsFailure)
 }
 
 const updateOwnedHandlebars = function () {
+  $('#index-event').show()
+  $('#show-owned').hide()
+
   api.showOwned()
     .then(ui.showOwnedSuccess)
     .catch(ui.showOwnedFailure)

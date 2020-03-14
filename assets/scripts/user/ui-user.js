@@ -19,7 +19,6 @@ const onSignInSuccess = function (data) {
   $('#create-event').show()
   $('#update-event').show()
   $('#delete-event').show()
-  $('#index-event').show()
   $('#index-all-events').show()
   $('#show-owned').show()
 

@@ -36,6 +36,8 @@ const onEventDeleteFailure = function (data) {
 const onEventIndexSuccess = function (data) {
   $('#index-events').trigger('reset')
   $('#user-messages').html('Showing all events')
+  $('#index-event').hide()
+  $('#show-owned').show()
 
   const showEventsHtml = showEventsTemplate({ hangouts: data.events })
   $('#event-list').html(showEventsHtml)
@@ -99,6 +101,8 @@ const onUnRsvpUserFailure = function (data) {
 const showOwnedSuccess = function (data) {
   const showOwnedEvents = showOwnedTemplate({ hangouts: data.events })
   $('#event-list').html(showOwnedEvents)
+  $('#index-event').show()
+  $('#show-owned').hide()
 }
 
 const showOwnedFailure = function (data) {

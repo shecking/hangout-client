@@ -25,37 +25,35 @@
                   </button>
                 </div>
                 <div class="modal-body">
-                  <h6 class="card-title">event.id:{{hangout._id}}</h6>
-
-                  {{#if hangout.users}}
-                    <h6 class="card-title">{{hangout.users}}</h6>
-                  {{else}}
-                    <h6>(Empty)</h6>
-                  {{/if}}
 
                   {{#if hangout.date}}
-                    <h6 class="card-title">{{hangout.date}}</h6>
+                    {{#if hangout.time}}
+                      <h6 class="card-title">{{hangout.time}}, {{date hangout.date}}</h6>
+                    {{else}}
+                      <h6>(Time undefined)</h6>
+                    {{/if}}
                   {{else}}
-                    <h6>(Empty)</h6>
-                  {{/if}}
-
-                  {{#if hangout.time}}
-                    <h6 class="card-title">{{hangout.time}}</h6>
-                  {{else}}
-                    <h6>(Empty)</h6>
+                    <h6>(Time undefined)</h6>
                   {{/if}}
 
                   {{#if hangout.location}}
                     <h6 class="card-title">{{hangout.location}}</h6>
                   {{else}}
-                    <h6>(Empty)</h6>
+                    <h6>(Location undefined)</h6>
+                  {{/if}}
+
+                  {{#if hangout.users}}
+                    <h6 class="card-title">Number of attendees: {{hangout.users.length}}</h6>
+                  {{else}}
+                    <h6>Number of attendees: 0</h6>
                   {{/if}}
 
                   {{#if hangout.description}}
                     <h6 class="card-title">{{hangout.description}}</h6>
                   {{else}}
-                    <h6>(Empty)</h6>
+                    <h6>(No description)</h6>
                   {{/if}}
+
                 </div>
               </div>
             </div>

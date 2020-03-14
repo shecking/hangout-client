@@ -3,6 +3,7 @@
 const getFormFields = require('./../../../lib/get-form-fields')
 const api = require('./api-user')
 const ui = require('./ui-user')
+const auto = require('./../rsvp/events-rsvp')
 
 const onSignUp = function (event) {
   event.preventDefault()
@@ -23,6 +24,7 @@ const onSignIn = function (event) {
 
   api.onSignIn(data)
     .then(ui.onSignInSuccess)
+    .then(auto.updateHandlebars)
     .catch(ui.onSignInFailure)
 }
 
@@ -34,6 +36,7 @@ const onSignOut = function (event) {
 
   api.onSignOut()
     .then(ui.onSignOutSuccess)
+    .then(auto.onPageLoad)
     .catch(ui.onSignOutFailure)
 }
 

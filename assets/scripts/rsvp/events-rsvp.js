@@ -138,5 +138,6 @@ module.exports = {
   onRsvpEvent,
   onUnRsvpEvent,
   showOwned,
-  onPageLoad
+  onPageLoad,
+  updateHandlebars
 }

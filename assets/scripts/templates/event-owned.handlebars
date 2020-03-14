@@ -21,7 +21,7 @@
               <div class="modal-body" data-id="{{hangout._id}}">
                 <form class='update-event'>
                   <input name='event[title]' type='text' placeholder='Title' value='{{hangout.title}}'>
-                  <input name='event[date]' type='date' placeholder='Date'>
+                  <input name='event[date]' type='text' placeholder='12/31/2000' value='{{updateDate hangout.date}}'>
                   <input name='event[time]' type='text' placeholder='Time' value='{{hangout.time}}'>
                   <input name='event[location]' type='text' placeholder='Location' value='{{hangout.location}}'>
                   <input name='event[description]' type='text' placeholder='Description' value='{{hangout.description}}'>

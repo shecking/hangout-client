@@ -17,6 +17,7 @@ const onEventCreateFailure = function (data) {
 const onEventUpdateSuccess = function (data) {
   $('#update-event').trigger('reset')
   $('#user-messages').html('Event updated')
+  $('.modal-backdrop').remove()
 }
 
 const onEventUpdateFailure = function (data) {

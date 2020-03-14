@@ -44,6 +44,15 @@ h1 {
   z-index: 2;
 }
 
+label {
+  color: $text-color;
+}
+
+.pwd-and-sign-out {
+  bottom: 0;
+  position: absolute;
+}
+
 .sidebar {
   background-color: $sidebar-color;
   display: inline-block;
@@ -57,5 +66,7 @@ h1 {
 
 .user-messages {
   color: $text-color;
+  font-size: 24px;
+  font-weight: 600;
   margin-top: 85px;
 }

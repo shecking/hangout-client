@@ -15,7 +15,7 @@ This application is designed to track potential event opportunities that a perso
 
 It's broken down by event: location, name, date.
 
-The front end is hosted on [github pages](https://we-work-on-master.github.io/hangout-client/), and the backend API is hosted on [heroku](https://mysterious-island-33488.herokuapp.com/). —> need to make sure these are both the right links at the end of the project
+The front end is hosted on [github pages](https://we-work-on-master.github.io/hangout-client/), and the backend API is hosted on [heroku](https://mysterious-island-33488.herokuapp.com/). 
 
 **Technologies Used**
 

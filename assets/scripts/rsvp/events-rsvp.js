@@ -28,7 +28,6 @@ const onEventCreate = function (event) {
 
   const form = event.target
   const data = getFormFields(form)
-  console.log(data)
   if (data.event.title === '') {
     $('#user-messages').html('Title cannot empty, please try again')
   } else if (data.event.date === '') {

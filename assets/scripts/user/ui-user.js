@@ -76,7 +76,7 @@ const onGetEventsArraySuccess = function (data) {
 }
 
 const onGetEventsArrayFailure = function (data) {
-  $('#user-messages').html('nah dawg')
+  $('#user-messages').html('Failed to get events')
 }
 
 module.exports = {

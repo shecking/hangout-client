@@ -4,9 +4,9 @@ HangOut  README: Front End
 
 Important Links:
 
-[Deployed Client](https://bhmdev.github.io/Building-Tracker-FE/)
+[Deployed Client](https://we-work-on-master.github.io/hangout-client/)
 <br>
-[Deployed API](https://github.com/bhmdev/Building-Tracker-FE)
+[Deployed API](https://mysterious-island-33488.herokuapp.com/)
 
 
 **Hangout Application  Description**
@@ -34,6 +34,7 @@ Front-end:
 Back-end:
 <li>Mongoose</li>
 <li>Mongo DB</li>
+<li>Express.js</li>
 </ol>
 
 **Wire Frames**
@@ -66,10 +67,8 @@ Decided that we would do a Many-to-Many between events and users.
 
 **Unsolved Issues & Future Goals**
 
-- Having a small messaging issue - but will fix.
-- SCSS would be the next thing I need to work on
-- In the future I'd love to make the user be able to search for a building via a search bar using the parameters of: Building Address/Location, Sq Ft, Built Date, and Price
-- I'd also love to have an option to set a particular building with a class i.e. Mixed Use, Retail, Office, Industrial etc.
+- We did not allow users to send out messages to all RSVPd users.
+- 3rd party APi would like to be implemented
 
 **Author**
 

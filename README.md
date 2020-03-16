@@ -72,6 +72,6 @@ Decided that we would do a Many-to-Many between events and users.
 - We did not allow users to send out messages to all RSVPd users.
 - 3rd party APi would like to be implemented
 
-**Author**
+**Authors**
 
 Brendan M. , Drew M, Kevin O, Steven H.

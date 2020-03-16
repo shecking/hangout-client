@@ -6,7 +6,7 @@ const showOwnedTemplate = require('../templates/event-owned.handlebars')
 const showUnsignedTemplate = require('../templates/events-signedOut.handlebars')
 
 const onEventCreateSuccess = function (data) {
-  $('#event-create').trigger('reset')
+  $('#create-event').trigger('reset')
   $('#user-messages').html('Event created')
 }
 
@@ -25,7 +25,6 @@ const onEventUpdateFailure = function (data) {
 }
 
 const onEventDeleteSuccess = function (data) {
-  $('#delete-event').trigger('reset')
   $('#user-messages').html('Event was deleted')
 }
 
@@ -34,7 +33,6 @@ const onEventDeleteFailure = function (data) {
 }
 
 const onEventIndexSuccess = function (data) {
-  $('#index-events').trigger('reset')
   $('#user-messages').html('Showing events')
   $('#index-event').hide()
   $('#show-owned').show()
@@ -48,7 +46,6 @@ const onEventIndexFailure = function (data) {
 }
 
 const onAllEventIndexSuccess = function (data) {
-  $('#index-all-event').trigger('reset')
   $('#user-messages').html('Showing events')
 }
 
@@ -62,6 +59,7 @@ const onUpdateHandlebarsSuccess = function (data) {
 }
 
 const onUpdateHandlebarsFailure = function (data) {
+  $('#user-messages').html('Failed to update event list')
 }
 
 const onRsvpEventSuccess = function (data) {
@@ -81,7 +79,6 @@ const onUnRsvpEventFailure = function (data) {
 }
 
 const onRsvpUserSuccess = function (data) {
-  $('#rsvp-event').trigger('reset')
   $('#user-messages').html('Successfully RSVP to event')
 }
 
@@ -90,7 +87,6 @@ const onRsvpUserFailure = function (data) {
 }
 
 const onUnRsvpUserSuccess = function (data) {
-  $('#rsvp-event').trigger('reset')
   $('#user-messages').html('Successfully Un-RSVP to event')
 }
 

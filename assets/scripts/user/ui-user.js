@@ -21,14 +21,13 @@ const onSignInSuccess = function (data) {
   $('#delete-event').show()
   $('#index-all-events').show()
   $('#show-owned').show()
-
   $('#sign-in').hide()
   $('#sign-up').hide()
 
   $('#sign-in').trigger('reset')
-  $('#change-password').trigger('reset')
-  $('#create-event').trigger('reset')
   $('#sign-up').trigger('reset')
+  $('#create-event').trigger('reset')
+
   $('#user-messages').html('Sign in worked')
 }
 
@@ -48,14 +47,12 @@ const onSignOutSuccess = function (data) {
   $('#index-event').hide()
   $('#index-all-events').hide()
   $('#show-owned').hide()
-
   $('#sign-in').show()
   $('#sign-up').show()
 
-  $('#sign-in').trigger('reset')
   $('#change-password').trigger('reset')
   $('#create-event').trigger('reset')
-  $('#sign-up').trigger('reset')
+
   $('#user-messages').html('Sign out worked')
 }
 
@@ -76,7 +73,6 @@ const onGetEventsArraySuccess = function (data) {
 }
 
 const onGetEventsArrayFailure = function (data) {
-  $('#user-messages').html('nah dawg')
 }
 
 module.exports = {

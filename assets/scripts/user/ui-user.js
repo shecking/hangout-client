@@ -2,12 +2,12 @@
 const store = require('./../store')
 
 const onSignUpSuccess = function (data) {
-  $('#user-messages').html('Sign up worked')
+  $('#user-messages').html('Sign-up successful')
   $('#sign-up').trigger('reset')
 }
 
 const onSignUpFailure = function (data) {
-  $('#user-messages').html('Sign up failed')
+  $('#user-messages').html('Sign-up failed')
 }
 
 const onSignInSuccess = function (data) {
@@ -28,11 +28,11 @@ const onSignInSuccess = function (data) {
   $('#sign-up').trigger('reset')
   $('#create-event').trigger('reset')
 
-  $('#user-messages').html('Sign in worked')
+  $('#user-messages').html('Sign-in successful')
 }
 
 const onSignInFailure = function (data) {
-  $('#user-messages').html('Sign in failed')
+  $('#user-messages').html('Sign-in failed')
 }
 
 const onSignOutSuccess = function (data) {
@@ -53,27 +53,26 @@ const onSignOutSuccess = function (data) {
   $('#change-password').trigger('reset')
   $('#create-event').trigger('reset')
 
-  $('#user-messages').html('Sign out worked')
+  $('#user-messages').html('Sign-out successful')
 }
 
 const onSignOutFailure = function (data) {
-  $('#user-messages').html('Sign out failed')
+  $('#user-messages').html('Sign-out failed')
 }
 
 const onChangePasswordSuccess = function (data) {
   $('#change-password').trigger('reset')
-  $('#user-messages').html('change password worked')
+  $('#user-messages').html('Password-update successful')
 }
 
 const onChangePasswordFailure = function (data) {
-  $('#user-messages').html('change password failed')
+  $('#user-messages').html('Password-update failed')
 }
 
 const onGetEventsArraySuccess = function (data) {
 }
 
 const onGetEventsArrayFailure = function (data) {
-  $('#user-messages').html('Failed to get events')
 }
 
 module.exports = {

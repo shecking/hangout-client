@@ -35,7 +35,7 @@ const onEventCreate = function (event) {
   } else if (data.event.time === '') {
     $('#user-messages').html('Time cannot empty, please try again')
   } else if (data.event.location === '') {
-    $('#user-messages').html('Location cannot empty, please try again')
+    $('#user-messages').html('Location cannot empty. Try again')
   } else {
     api.eventCreate(data)
       .then(ui.onEventCreateSuccess)
